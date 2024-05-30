@@ -1,0 +1,11 @@
+version: 1
+common:
+  resourcesPath: ./resources
+apps:
+  - appID: default-statestore-service
+    appPort: 8080
+    appProtocol: http
+    daprHTTPPort: 3500
+    daprGRPCPort: 50001
+    appDirPath: ../
+    command: ["java", "-jar", "target/quarkus-app/quarkus-run.jar"]
